@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ad_weeklytimecardsharepointtemplatecopy_ed80c</Name>
+  <AppVersion>2026-03-06T08:24:01Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.26024.14.0</CreatedByClientVersion>
+  <MinClientVersion>3.26024.14.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.26024.14","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","offlineLargeFilesSupport":"false","sienaVersion":"20260306T060124Z-3.26024.14.0","m365CopilotSettingValue":"0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>rgba(53, 61, 63, 1)</BackgroundColor>
+  <DisplayName>Weekly TimeCard Template - SP</DisplayName>
+  <Description>This template is for a weekly timecard application using SharePoint</Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{"ae0b9f78-56fa-40df-9b1c-3de2009a62ec":{"id":"/providers/microsoft.powerapps/apis/shared_office365users","displayName":"Office 365 Users","iconUri":"https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/releases/v1.0.1788/1.0.1788.4544/office365users/icon.png","dataSources":["Office365Users"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard"},"ff4ce113-4f2c-46d5-a94a-709429396635":{"id":"/providers/microsoft.powerapps/apis/shared_sharepointonline","displayName":"SharePoint","iconUri":"https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/releases/v1.0.1769/1.0.1769.4361/sharepointonline/icon.png","dataSources":["BillTo","TimeEntries","Assignment Registration","Customer Registration","Business Unit Task","AppSettings"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{"https://kayesssquare1.sharepoint.com/sites/KayessIntranetSite":{"dataSources":{"BillTo":{"tableName":"e8e63f5b-38f2-4d8f-a29a-2c2c48d8c86a"},"TimeEntries":{"tableName":"cf46eaeb-c3a7-434f-bafd-9784ec2cd91d"},"Assignment Registration":{"tableName":"1b0dc259-9a37-4b79-8239-1d3da43d13b6"},"Customer Registration":{"tableName":"f7908dde-cedf-4dd2-9e30-7d9322688e01"},"Business Unit Task":{"tableName":"26122367-90b6-4f7c-8495-0d3ae91d4a62"},"AppSettings":{"tableName":"f2ad0ba8-5c18-413c-b127-5fe5d66a9997"}}}},"apiTier":"Standard","actions":["providers/PowerPlatform.Governance/Operations/Read","providers/PowerPlatform.Governance/Operations/Write","providers/PowerPlatform.Governance/Operations/Delete"]}}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/ad_weeklytimecardsharepointtemplatecopy_ed80c_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/ad_weeklytimecardsharepointtemplatecopy_ed80c_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/ad_weeklytimecardsharepointtemplatecopy_ed80c_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>
