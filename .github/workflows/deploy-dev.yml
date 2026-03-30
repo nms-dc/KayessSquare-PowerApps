@@ -10,17 +10,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout code
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install PAC CLI
-        run: npm install -g @microsoft/powerplatform-cli
+      # Install .NET (required for PAC CLI)
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
 
+      # Install PAC CLI (correct way)
+      - name: Install PAC CLI
+        run: |
+          dotnet tool install --global Microsoft.PowerApps.CLI.Tool
+
+      # Add PAC to PATH
+      - name: Add .NET tools to PATH
+        run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      # Verify PAC installation (debug step)
+      - name: Check PAC version
+        run: pac help
+
+      # Pack solution
       - name: Pack solution
         run: |
           pac solution pack \
             --zipfile solution.zip \
             --folder src
 
+      # Just confirm build success
       - name: Done
-        run: echo "Build completed"
+        run: echo "Build completed successfully "
