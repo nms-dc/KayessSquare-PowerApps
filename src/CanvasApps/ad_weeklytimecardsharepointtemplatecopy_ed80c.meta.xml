@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>ad_weeklytimecardsharepointtemplatecopy_ed80c</Name>
-  <AppVersion>2026-03-06T08:24:01Z</AppVersion>
+  <AppVersion>2026-04-03T08:05:43Z</AppVersion>
   <Status>Ready</Status>
-  <CreatedByClientVersion>3.26024.14.0</CreatedByClientVersion>
-  <MinClientVersion>3.26024.14.0</MinClientVersion>
-  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.26024.14","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","offlineLargeFilesSupport":"false","sienaVersion":"20260306T060124Z-3.26024.14.0","m365CopilotSettingValue":"0"}</Tags>
+  <CreatedByClientVersion>3.26034.12.0</CreatedByClientVersion>
+  <MinClientVersion>3.26034.12.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.26034.12","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","offlineLargeFilesSupport":"false","sienaVersion":"20260330T102613Z-3.26033.10.0","m365CopilotSettingValue":"0"}</Tags>
   <IsCdsUpgraded>0</IsCdsUpgraded>
   <GalleryItemId xsi:nil="true"></GalleryItemId>
   <BackgroundColor>rgba(53, 61, 63, 1)</BackgroundColor>
