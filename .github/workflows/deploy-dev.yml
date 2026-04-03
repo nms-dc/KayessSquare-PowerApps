@@ -14,13 +14,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Install .NET (required for PAC CLI)
+      # Setup .NET
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '6.0.x'
 
-      # Install PAC CLI (correct way)
+      # Install PAC CLI
       - name: Install PAC CLI
         run: |
           dotnet tool install --global Microsoft.PowerApps.CLI.Tool
@@ -29,8 +29,8 @@ jobs:
       - name: Add .NET tools to PATH
         run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
-      # Verify PAC installation (debug step)
-      - name: Check PAC version
+      # Verify PAC
+      - name: Check PAC
         run: pac help
 
       # Pack solution
@@ -40,6 +40,23 @@ jobs:
             --zipfile solution.zip \
             --folder src
 
-      # Just confirm build success
+      # Authenticate to Power Platform
+      - name: Authenticate
+        run: |
+          pac auth create \
+            --environment ${{ secrets.ENV_URL }} \
+            --applicationId ${{ secrets.CLIENT_ID }} \
+            --clientSecret ${{ secrets.CLIENT_SECRET }} \
+            --tenant ${{ secrets.TENANT_ID }}
+
+      # Import solution to DEV
+      - name: Import Solution
+        run: |
+          pac solution import \
+            --path solution.zip \
+            --publishChanges \
+            --forceOverwrite
+
+      # Done
       - name: Done
-        run: echo "Build completed successfully "
+        run: echo "Deployment completed "
