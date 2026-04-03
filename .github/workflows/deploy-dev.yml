@@ -1,0 +1,62 @@
+name: Deploy to DEV
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Setup .NET
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+
+      # Install PAC CLI
+      - name: Install PAC CLI
+        run: |
+          dotnet tool install --global Microsoft.PowerApps.CLI.Tool
+
+      # Add PAC to PATH
+      - name: Add .NET tools to PATH
+        run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      # Verify PAC
+      - name: Check PAC
+        run: pac help
+
+      # Pack solution
+      - name: Pack solution
+        run: |
+          pac solution pack \
+            --zipfile solution.zip \
+            --folder src
+
+      # Authenticate to Power Platform
+      - name: Authenticate
+        run: |
+          pac auth create \
+            --environment ${{ secrets.ENV_URL }} \
+            --applicationId ${{ secrets.CLIENT_ID }} \
+            --clientSecret ${{ secrets.CLIENT_SECRET }} \
+            --tenant ${{ secrets.TENANT_ID }}
+
+      # Import solution to DEV
+      - name: Import Solution
+        run: |
+          pac solution import \
+            --path solution.zip \
+            --publishChanges \
+            --forceOverwrite
+
+      # Done
+      - name: Done
+        run: echo "Deployment completed "
